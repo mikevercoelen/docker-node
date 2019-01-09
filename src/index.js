@@ -1,10 +1,7 @@
-const url = require('url')
 const express = require('express')
-const config = require('./config')
+const { PORT } = require('./config')
 
 const app = express()
-
-const { port } = new url.URL(config.URL)
 
 app.get('/', (req, res) => {
   res.json({
@@ -12,7 +9,7 @@ app.get('/', (req, res) => {
   })
 })
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   // eslint-disable-next-line no-console
-  console.log(`Server has started, listening on port: ${port}`)
+  console.log(`Server has started, listening on port: ${PORT}`)
 })

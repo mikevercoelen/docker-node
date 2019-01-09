@@ -6,7 +6,9 @@
     "start": "node ./src/index.js",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "docker-build": "docker build -t docker-node .",
+    "docker-run": "docker run -p 3001:3000 docker-node"
   },
   "lint-staged": {
     "*.js": [
