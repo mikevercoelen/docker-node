@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "start": "NODE_ENV=development nodemon ./src/index.js --exec \"node --preserve-symlinks -r dotenv/config\"",
+    "start-production": "NODE_ENV=production node ./src/index.js",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
-    "precommit": "lint-staged",
-    "docker-build": "docker build -t docker-node .",
-    "docker-run": "docker run -p 3001:3000 docker-node"
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
