@@ -5,6 +5,7 @@ This is a very basic repo to demo how to use Docker with Node.js
 
 - Node.js
 - Docker
+- Mongodb
 
 ## Getting started (development)
 
